@@ -2,28 +2,19 @@ public class Main
 {
     public static void main(String[] args)
     {
-        int[] arr = {12,1221,98,95,78,87,95,96,100,101};
-        int target = 1221;
-        int result=linearSearch(arr,target);
-        System.out.println(result);
+      int[] arr= {2,4,5,6,7,11};
+        System.out.println(min(arr));
     }
-
-    //static function for checking
-    static int linearSearch(int[] arr,int target)
+    static int min(int[] arr)
     {
-        if(arr.length == 0)
+        int ans = arr[0];
+        for (int i = 0; i < arr.length ; i++)
         {
-            return -1;
-        }
-        for (int index = 0; index < arr.length; index++)
-        {
-            int element = arr[index];
-            if(element == target)
+            if(arr[i] < ans)
             {
-                return index;
+                ans = arr[i];
             }
         }
-        return -1;
+        return ans;
     }
-
 }
